@@ -1,5 +1,5 @@
 {
-  "homepage": "http://LudwigFritsch.github.io/PathfindingVisualizer",
+  "homepage": "http://LudwigFritsch.github.io/pathfinding",
   "name": "pathfinding-visualizer",
   "version": "0.1.0",
   "private": false,
@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -39,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.0"
+    "gh-pages": "^3.2.3"
   }
 }

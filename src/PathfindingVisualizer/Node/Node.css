@@ -1,0 +1,401 @@
+.node {
+  background-color: white;
+  border: 1px solid rgb(175, 216, 248);
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+
+.node-start {
+  width: 100%;
+  height: 100%;
+
+  /* border: 1px solid rgb(175, 216, 248); */
+  background-image: url(https://svgshare.com/getbyhash/sha1-yAWHMbXmBhkwTLV77DIPjK7SHn4=);
+  background-position: center;
+  background-size: contain;
+}
+
+@keyframes start {
+  0% {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.2);
+    /* background-color: darkslategrey; */
+  }
+  100% {
+    transform: scale(1);
+    /* background-color: darkslategrey; */
+  }
+}
+
+.node-finish {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid rgb(175, 216, 248);
+  background-image: url(https://svgshare.com/getbyhash/sha1-c7hqbypOmeOvdRvpH2Af8e2mbnU=);
+  background-position: center;
+  background-size: contain;
+  display: block;
+}
+
+.node-bomb {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid rgb(175, 216, 248);
+  background-image: url(https://svgshare.com/getbyhash/sha1-azrTpZ1HoMGS3EXrju+GximBV64=);
+  background-position: center;
+  background-size: contain;
+  display: block;
+}
+
+.node-visited {
+  border: 1px solid rgb(175, 216, 248);
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-visited-bomb {
+  border: 1px solid rgb(175, 216, 248);
+  animation-name: visitedObjectAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+  50% {
+    background-color: rgba(17, 104, 217, 0.75);
+  }
+  75% {
+    transform: scale(1.2);
+    background-color: rgba(0, 217, 159, 0.75);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 190, 218, 0.75);
+  }
+}
+
+@keyframes visitedObjectAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(41, 4, 24, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(97, 0, 20, 0.75);
+  }
+
+  75% {
+    transform: scale(1.2);
+    background-color: rgba(216, 5, 141, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(178, 67, 255, 0.75);
+  }
+}
+
+.node-shortest-path {
+  background-color: rgb(255, 254, 106);
+  height: 100%;
+  width: 100%;
+  animation-name: shortestpath;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes shortestpath {
+  0% {
+    transform: scale(0.6);
+    background-color: rgb(255, 254, 106);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgb(255, 254, 106);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgb(255, 254, 106);
+  }
+}
+
+.node-wall {
+  border: 1px solid rgba(175, 216, 248, 0);
+  background-color: rgb(12, 53, 71);
+  animation-name: makeWall;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes makeWall {
+  0% {
+    background-color: rgb(12, 53, 71);
+  }
+  55% {
+    transform: scale(1.3);
+    background-color: rgb(12, 53, 71);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgb(12, 53, 71);
+  }
+}
+
+.node-pre {
+  background-color: rgb(255, 254, 106);
+  border: 1px solid rgb(175, 216, 248);
+  height: 100%;
+  width: 100%;
+}
+
+.node-shortest-path-pre-up {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-yAWHMbXmBhkwTLV77DIPjK7SHn4=);
+  background-position: center;
+  background-size: contain;
+  transform: rotate(270deg);
+}
+
+.node-shortest-path-pre-down {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-yAWHMbXmBhkwTLV77DIPjK7SHn4=);
+  background-position: center;
+  background-size: contain;
+  transform: rotate(90deg);
+}
+.node-shortest-path-pre-right {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-yAWHMbXmBhkwTLV77DIPjK7SHn4=);
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(255, 254, 106);
+}
+
+.node-shortest-path-pre-left {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-yAWHMbXmBhkwTLV77DIPjK7SHn4=);
+  background-position: center;
+  background-size: contain;
+  transform: scaleX(-1);
+}
+
+.node-visited-start {
+  border: 1px solid rgb(175, 216, 248);
+  background-image: url(https://svgshare.com/getbyhash/sha1-yAWHMbXmBhkwTLV77DIPjK7SHn4=);
+  background-position: center;
+  background-size: contain;
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-visited-start-bomb {
+  border: 1px solid rgb(175, 216, 248);
+  background-image: url(https://svgshare.com/getbyhash/sha1-yAWHMbXmBhkwTLV77DIPjK7SHn4=);
+  background-position: center;
+  background-size: contain;
+  animation-name: visitedObjectAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-visited-finish {
+  border: 1px solid rgb(175, 216, 248);
+  background-image: url(https://svgshare.com/getbyhash/sha1-c7hqbypOmeOvdRvpH2Af8e2mbnU=);
+  background-position: center;
+  background-size: contain;
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes node-shortest-path-start {
+  0% {
+    transform: scale(0.6);
+    background-color: rgb(255, 254, 106);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgb(255, 254, 106);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgb(255, 254, 106);
+  }
+}
+
+.node-shortest-path-finish {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-c7hqbypOmeOvdRvpH2Af8e2mbnU=);
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(255, 254, 106);
+  animation-name: node-shortest-path-start;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-shortest-path-start {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-yAWHMbXmBhkwTLV77DIPjK7SHn4=);
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(255, 254, 106);
+  animation-name: node-shortest-path-start;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-shortest-path-start-after {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-yAWHMbXmBhkwTLV77DIPjK7SHn4=);
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(255, 254, 106);
+}
+
+.node-shortest-path-finish-after {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-c7hqbypOmeOvdRvpH2Af8e2mbnU=);
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(255, 254, 106);
+}
+
+.node-afterwards {
+  background-color: rgba(0, 190, 218, 0.75);
+  border: 1px solid rgb(175, 216, 248);
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.node-afterwards-purple {
+  background-color: rgba(178, 67, 255, 0.75);
+  border: 1px solid rgb(175, 216, 248);
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.shortest-path-afterwards {
+  background-color: rgb(255, 254, 106);
+}
+
+.bomb-node-visited {
+  border: 1px solid rgb(175, 216, 248);
+  background-image: url(https://svgshare.com/getbyhash/sha1-azrTpZ1HoMGS3EXrju+GximBV64=);
+  background-position: center;
+  background-size: contain;
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-visited-finish-bomb {
+  border: 1px solid rgb(175, 216, 248);
+  background-image: url(https://svgshare.com/getbyhash/sha1-c7hqbypOmeOvdRvpH2Af8e2mbnU=);
+  background-position: center;
+  background-size: contain;
+  animation-name: visitedObjectAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-shortest-path-bomb {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-azrTpZ1HoMGS3EXrju+GximBV64=);
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(255, 254, 106);
+  animation-name: node-shortest-path-start;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-shortest-path-bomb-after {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://svgshare.com/getbyhash/sha1-azrTpZ1HoMGS3EXrju+GximBV64=);
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(255, 254, 106);
+}
